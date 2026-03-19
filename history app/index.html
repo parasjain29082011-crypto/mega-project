@@ -49,6 +49,7 @@
         <li><a href="#" class="nav-cta">Begin Journey</a></li>
       </ul>
       <div class="nav-controls">
+        <button id="install-btn" class="icon-btn" title="Install App" style="display:none;">📲</button>
         <button id="theme-toggle" class="icon-btn" title="Toggle theme">☀️</button>
         <button id="history-btn" class="icon-btn" title="Past searches">📜</button>
         <button id="oracle-btn" class="icon-btn" title="Ask the Oracle">🔮</button>
@@ -75,28 +76,20 @@
 
   <!-- ASK THE ORACLE PANEL (RIGHT) -->
   <aside id="oracle-panel" class="oracle-panel">
-
-    <!-- Header -->
     <div class="oracle-header">
       <div class="oracle-title-row">
         <span class="oracle-title-text">🔮 Ask the Oracle</span>
         <button id="close-oracle" class="close-btn">×</button>
       </div>
-
-      <!-- Two tabs -->
       <div class="oracle-tabs">
         <button class="oracle-tab active" data-otab="location">📍 This Location</button>
         <button class="oracle-tab" data-otab="allhistory">🌍 Full History</button>
       </div>
-
-      <!-- Current location badge -->
       <div id="oracle-location-badge" class="oracle-location-badge" style="display:none;">
         <span class="badge-icon">📍</span>
         <span id="oracle-location-name" class="badge-name"></span>
-        <button id="oracle-clear-chat" class="oracle-clear-btn" title="Clear location chat">🗑</button>
+        <button id="oracle-clear-chat" class="oracle-clear-btn" title="Clear chat">🗑</button>
       </div>
-
-      <!-- Voice + TTS row -->
       <div class="oracle-voice-row">
         <label class="voice-label">🗣</label>
         <select id="voice-select" class="voice-select"></select>
@@ -105,8 +98,6 @@
         <button id="tts-stop" class="tts-btn" title="Stop">⏹</button>
       </div>
     </div>
-
-    <!-- Location chat -->
     <div id="oracle-loc-messages" class="oracle-messages">
       <div class="oracle-welcome">
         <div class="oracle-welcome-icon">🏛️</div>
@@ -114,14 +105,8 @@
         <p>Search a location first, then ask me anything about its history.</p>
       </div>
     </div>
-
-    <!-- All history chat -->
     <div id="oracle-all-messages" class="oracle-messages" style="display:none;"></div>
-
-    <!-- Suggested questions -->
     <div id="oracle-suggestions" class="oracle-suggestions" style="display:none;"></div>
-
-    <!-- Input -->
     <div class="oracle-input-wrap">
       <input id="oracle-input" class="oracle-input" type="text" placeholder="Ask the Oracle…"/>
       <button id="oracle-send" class="oracle-send-btn">⚡</button>
@@ -138,7 +123,6 @@
     </div>
     <div class="gold-divider mid-div"><span class="div-orn">✦</span></div>
 
-    <!-- SEARCH -->
     <div class="search-block">
       <div class="search-label">
         <span class="search-label-text">Search a location across history</span>
@@ -152,7 +136,6 @@
       </button>
     </div>
 
-    <!-- RESULTS -->
     <div id="results-section" class="results-section" style="display:none;">
       <div id="loading" class="loading-container" style="display:none;">
         <div class="compass-spinner">🧭</div>
@@ -168,7 +151,6 @@
       <div id="artifacts-panel" class="artifacts-panel" style="display:none;"></div>
     </div>
 
-    <!-- CHIPS -->
     <div class="feature-row">
       <div class="feature-chip"><span>🏛️</span><span>Ancient Civilisations</span></div>
       <div class="chip-sep">✦</div>
