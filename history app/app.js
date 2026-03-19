@@ -4,8 +4,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // API calls go through Netlify Functions — keys are hidden server-side
-  const RESEARCH_API = '/.netlify/functions/research';
-  const ORACLE_API   = '/.netlify/functions/oracle';
+  const RESEARCH_API = '/api/research';
+  const ORACLE_API = '/api/oracle';
 
   // ── FIREBASE ────────────────────────────────────────────────────
   const auth     = firebase.auth();
