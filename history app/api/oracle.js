@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     if (!prompt) return res.status(400).json({ error: 'Prompt required' });
 
     const GEMINI_KEY = process.env.GEMINI_API_KEY_FINAL;
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_KEY}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_KEY}`;
 
     const body = {
       contents: [{ parts: [{ text: prompt }] }],

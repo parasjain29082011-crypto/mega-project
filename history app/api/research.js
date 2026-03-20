@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     if (!location) return res.status(400).json({ error: 'Location required' });
 
     const GEMINI_KEY = process.env.GEMINI_API_KEY_V2;
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${GEMINI_KEY}`;
 
     const response = await fetch(url, {
       method: 'POST',
