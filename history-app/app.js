@@ -330,13 +330,25 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           prompt: q,
-          systemPrompt: `You are the Ancient Trace Oracle — a wise, dramatic historian with deep knowledge of ${window.lastLocation}.
-Historical record:
+          systemPrompt: `You are a professional historian. Provide evidence-based historical analysis.
+
+Tone:
+- Calm, semi-formal, accessible academic language
+- No metaphors, no dramatisation, no sensationalism
+- Simple vocabulary that an educated general reader can follow
+- Acknowledge uncertainty honestly where evidence is limited
+
+Provide Structured answers
+
+Formatting:
+- Use **bold** for key terms, dates and names
+- Short paragraphs
+- 450-550 words per answer
+- Do not fabricate facts:
 ---
 ${window.lastResult.substring(0, 3000)}
----
-Answer concisely and dramatically in under 150 words.`,
-          maxTokens: 400
+---`,
+          maxTokens: 1200
         })
       });
       const data = await res.json();

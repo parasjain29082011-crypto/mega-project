@@ -32,6 +32,7 @@
     <ellipse cx="50%" cy="50%" rx="260" ry="160"/>
   </svg>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-inner">
       <div class="nav-brand">
@@ -62,6 +63,7 @@
     </div>
   </nav>
 
+  <!-- PAST SEARCHES SIDEBAR (LEFT) -->
   <aside id="past-sidebar" class="past-sidebar">
     <div class="sidebar-header">
       <h3>📜 Past Searches</h3>
@@ -72,6 +74,7 @@
     </div>
   </aside>
 
+  <!-- ASK THE ORACLE PANEL (RIGHT) -->
   <aside id="oracle-panel" class="oracle-panel">
     <div class="oracle-header">
       <div class="oracle-title-row">
@@ -80,9 +83,7 @@
       </div>
       <div class="oracle-tabs">
         <button class="oracle-tab active" data-otab="location">📍 This Location</button>
-        <button class="oracle-tab" data-otab="conversations">💬 Conversations</button>
-        <button class="oracle-tab" data-otab="manuscripts">📜 Manuscripts</button>
-        <button class="oracle-tab" data-otab="slides">🗂️ Slides</button>
+        <button class="oracle-tab" data-otab="allhistory">🌍 Full History</button>
       </div>
       <div id="oracle-location-badge" class="oracle-location-badge" style="display:none;">
         <span class="badge-icon">📍</span>
@@ -92,59 +93,27 @@
       <div class="oracle-voice-row">
         <label class="voice-label">🗣</label>
         <select id="voice-select" class="voice-select"></select>
-        <button id="tts-play"  class="tts-btn" title="Play summary">▶</button>
+        <button id="tts-play" class="tts-btn" title="Play summary">▶</button>
         <button id="tts-pause" class="tts-btn" title="Pause" style="display:none;">⏸</button>
-        <button id="tts-stop"  class="tts-btn" title="Stop">⏹</button>
+        <button id="tts-stop" class="tts-btn" title="Stop">⏹</button>
       </div>
     </div>
     <div id="oracle-loc-messages" class="oracle-messages">
       <div class="oracle-welcome">
-        <p>Search a location, then ask me anything about its history.</p>
+        <div class="oracle-welcome-icon">🏛️</div>
+        <p>I am the Oracle of Ancient Trace.</p>
+        <p>Search a location first, then ask me anything about its history.</p>
       </div>
     </div>
-    <div id="oracle-chat-messages"       class="oracle-messages" style="display:none;"></div>
-    <div id="oracle-manuscript-messages" class="oracle-messages" style="display:none;"></div>
-    <div id="oracle-slides-messages"     class="oracle-messages" style="display:none;"></div>
+    <div id="oracle-all-messages" class="oracle-messages" style="display:none;"></div>
     <div id="oracle-suggestions" class="oracle-suggestions" style="display:none;"></div>
     <div class="oracle-input-wrap">
-      <button id="create-slides-btn" class="create-slides-btn" title="Create slides" style="display:none;">🗂️</button>
-      <input id="oracle-input" class="oracle-input" type="text" placeholder="Ask the Oracle… or 'create slides about…'"/>
+      <input id="oracle-input" class="oracle-input" type="text" placeholder="Ask the Oracle…"/>
       <button id="oracle-send" class="oracle-send-btn">⚡</button>
     </div>
   </aside>
 
-  <!-- PARCHMENT MANUSCRIPT OVERLAY -->
-  <div id="parchment-overlay" class="parchment-overlay" style="display:none;">
-    <div class="parchment-paper">
-      <div class="parchment-header">
-        <div class="parchment-ornament-row">✦ &nbsp; ✦ &nbsp; ✦</div>
-        <h2 id="parchment-title" class="parchment-title"></h2>
-        <div class="parchment-sub">— Ancient Trace Manuscript —</div>
-      </div>
-      <div id="parchment-body" class="parchment-body"></div>
-      <div class="parchment-footer-ornament">✦</div>
-      <button id="parchment-close" class="parchment-close">× Close</button>
-    </div>
-  </div>
-
-  <!-- SLIDES OVERLAY -->
-  <div id="slides-overlay" class="slides-overlay" style="display:none;">
-    <div class="slides-viewer">
-      <div class="slides-toolbar">
-        <span id="slides-topic-title" class="slides-topic"></span>
-        <div class="slides-toolbar-btns">
-          <button id="slide-export" class="slide-btn slide-export-btn">⬇ Export PDF</button>
-          <button id="slide-close"  class="slide-btn slide-close-btn">✕ Close</button>
-        </div>
-      </div>
-      <div id="slides-container" class="slides-container"></div>
-      <div class="slides-nav">
-        <button id="slide-prev" class="slide-nav-btn">← Prev</button>
-        <button id="slide-next" class="slide-nav-btn">Next →</button>
-      </div>
-    </div>
-  </div>
-
+  <!-- HERO -->
   <main class="hero">
     <div class="gold-divider"><span class="div-orn">⚜</span></div>
     <div class="hero-title-block">
@@ -176,10 +145,10 @@
         <button id="bookmark-btn" class="bookmark-btn">🗿 Carve Into Stone</button>
         <span id="bookmark-status" class="bookmark-status"></span>
       </div>
-      <div id="results-content"   class="results-content"></div>
+      <div id="results-content" class="results-content"></div>
       <div id="sources-container" class="sources-container" style="display:none;"></div>
-      <div id="timeline-panel"    class="timeline-panel"    style="display:none;"></div>
-      <div id="artifacts-panel"   class="artifacts-panel"   style="display:none;"></div>
+      <div id="timeline-panel" class="timeline-panel" style="display:none;"></div>
+      <div id="artifacts-panel" class="artifacts-panel" style="display:none;"></div>
     </div>
 
     <div class="feature-row">
