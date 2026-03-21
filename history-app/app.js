@@ -1,6 +1,6 @@
 // Ancient Trace — app.js
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', function() {
 
   // ── Firebase ───────────────────────────────────────────────────────────────
   const auth = firebase.auth();
